@@ -1,0 +1,220 @@
+.introduce {
+	position: relative;
+}
+.introduce--novaland-officetel {
+	background: url('../images/novaland-officetel/bg-novaland-officetel.jpg') center center no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	max-width: 1440px;
+	height: 656px;
+
+	.title {
+		color: #002763;
+		font-size: 25px;
+		font-weight: 500;
+		text-align: center;
+		line-height: normal;
+		margin: 50px 0 0;
+		text-transform: uppercase;
+	}
+	.box-register {
+		background: url('../images/novaland-officetel/box-register.png') no-repeat;
+		width: 200px;
+		height: 78px;
+		margin-left: -100px;
+		@include ab ( n, 50%, -8px, n );
+		display: table;
+
+		p {
+			height: 100%;
+			display: table-cell;
+			vertical-align: middle;
+			color: #144a8a;
+			font-size: 15px;
+			text-align: center;
+			line-height: normal;
+			text-transform: uppercase;
+
+			strong {
+				display: block;
+				font-weight: bold;
+			}
+		}
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+}
+.introduce_benefits {
+	.list-benefits {
+		width: 100%;
+		margin: 0 auto;
+		max-width: 830px;
+		padding-top: 80px;
+
+		li {
+			float: left;
+			padding: 0 25px;
+			width: 33.333333%;
+
+			.inner {
+				background: url('../images/novaland-officetel/box.png') no-repeat;
+				width: 241px;
+				height: 74px;
+				margin: 0 auto;
+				padding: 0 20px;
+				display: table;
+			}
+			span {
+				height: 100%;
+				display: table-cell;
+				vertical-align: middle;
+				color: #144a8a;
+				font-size: 15px;
+				font-weight: bold;
+				line-height: normal;
+				text-align: center;
+			}
+		}
+	}
+}
+.introduce_projects {
+	.list-projects {
+		width: 100%;
+		margin: 0 auto;
+		max-width: 800px;
+		padding-top: 80px;
+
+		li {
+			float: left;
+			padding: 0 45px;
+			width: 33.333333%;
+			&:first-child {
+				img {
+					max-width: 140px;
+					margin-left: -70px;
+					bottom: 40px
+					/* margin: 35px auto 0; */
+				}
+			}
+			&:last-child {
+				img {
+					max-width: 140px;
+					margin-left: -70px;
+					bottom: 40px
+					/* margin: 10px auto 0; */
+				}
+			}
+
+			.outer {
+				background: url('../images/novaland-officetel/circle.png') no-repeat;
+				width: 202px;
+				height: 203px;
+				margin: 0 auto;
+				padding: 0 5px;
+				display: table;
+				text-align: center;
+
+				.inner {
+					height: 100%;
+					display: table-cell;
+					vertical-align: middle;
+					position: relative;
+				}
+			}
+			.position_name {
+				color: #144a8a;
+				font-size: 25px;
+				font-weight: bold;
+				line-height: normal;
+				text-align: center;
+				width: 100%;
+				@include ab ( 25px, 0, n, n );
+			}
+			img {
+				width: 100%;
+				max-width: 94px;
+				margin-left: -47px;
+				@include ab ( n, 50%, 30px, n );
+				/* margin: 8px auto 0; */
+			}
+		}
+	}
+}
+.introduce--rive-gate {
+	background: url('../images/rive-gate/bg.jpg') center center no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	max-width: 1440px;
+	height: 800px;
+	position: relative;
+}
+.introduce--sunrise-cityview {
+	background: url('../images/sunrise-cityview/bg.jpg') center center no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	max-width: 1440px;
+	height: 800px;
+	position: relative;
+}
+.introduce--the-sun-avenue {
+	background: url('../images/the-sun-avenue/bg.jpg') center center no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	max-width: 1440px;
+	height: 800px;
+	position: relative;
+}
+.introduce_info {
+	width: 100%;
+	max-width: 390px;
+	@include ab ( 150px, n, n, 265px );
+
+	.inner {
+		text-align: center;
+		padding: 20px 40px;
+		background-color: rgba( 251, 251, 251, 0.8 );
+		@include border-radius( 5px, 5px, 5px, 5px );
+
+		img {
+
+		}
+		p {
+			margin: 0;
+			padding-top: 15px;
+		}
+		/* .position {
+			padding-top: 0;
+		} */
+		.position, .prize {
+			color: #144a8a;
+			font-size: 25px;
+			font-weight: 300;
+			line-height: normal;
+			text-transform: uppercase;
+		}
+		.benefits {
+			color: #144a8a;
+			font-size: 20px;
+			font-weight: 300;
+			line-height: normal;
+		}
+		.prize {
+			font-weight: 500;
+		}
+	}
+	a {
+		background: url('../images/novaland-officetel/btn-find-out-more.png') no-repeat;
+		width: 182px;
+		height: 37px;
+		display: block;
+		margin: 20px auto 0;
+		color: #144a8a;
+		font-size: 17px;
+		font-weight: bold;
+		line-height: 37px;
+		text-align: center;
+	}
+}

@@ -1,0 +1,121 @@
+.modal {
+	width: 100%;
+	margin: 0 auto;
+	max-width: 480px;
+
+	.inner {
+		position: relative;
+
+		.button-close {
+			width: 20px;
+			height: 20px;
+			text-align: center;
+			border: 2px solid #fff;
+			background-color: #164b8b;
+			@include ab ( -10px, n, n, -10px );
+			@include border-radius( 50%, 50%, 50%, 50% );
+
+			.icon {
+				color: #fff;
+				line-height: 20px;
+			    font-style: normal;
+			    top: -3px;
+			    position: relative;
+			}
+		}
+	}
+}
+.modal_header {
+	background: url('../images/novaland-officetel/bg-modal-top.jpg') no-repeat;
+	width: 480px;
+	height: 47px;
+
+	p {
+		margin: 0;
+		color: #fff;
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 47px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+.modal_content {
+	width: 100%;
+	height: 227px;
+	padding-left: 150px;
+	display: table;
+	background: #fff url('../images/novaland-officetel/bg-modal-content.jpg') no-repeat;
+
+	.modal_content_inner {
+		display: table-cell;
+		vertical-align: middle;
+		height: 100%;
+	}
+}
+.modal--successful {
+	text-align: center;
+
+	.modal_content {
+		padding-left: 115px;
+	}
+	h3 {
+		color: #144a8a;
+		font-size: 28px;
+		font-weight: 300;
+		font-style: italic;
+		line-height: normal;
+		max-width: 310px;
+		margin: 0 auto;
+	}
+	.mess {
+		color: #144a8a;
+		font-size: 16px;
+		font-weight: 300;
+		font-style: italic;
+		line-height: normal;
+		max-width: 310px;
+		margin: 10px auto 0;
+	}
+}
+.modal--register {
+	.form {
+		margin: 0 auto;
+		max-width: 300px;
+
+		.wrap-field {
+			border: 1px solid #aaaaaa;
+			height: 25px;
+			margin-top: 10px;
+			&:first-child {
+				margin-top: 0;
+			}
+
+			input {
+				width: 100%;
+				height: 100%;
+				padding: 0 10px;
+				font-size: 14px;
+				color: #144a8a;
+				font-weight: 300;
+				font-style: italic;
+			}
+		}
+		.button-register-now {
+			width: 148px;
+			height: 31px;
+			color: #fff;
+			font-size: 14px;
+			line-height: 31px;
+			text-align: center;
+			text-transform: uppercase;
+			padding-right: 10px;
+			background: url('../images/novaland-officetel/button-register-now.png') no-repeat;
+			@include ab ( n, n, 10px, 0 );
+		}
+	}
+}
+
+button.mfp-close, button.mfp-arrow {
+	display: none;
+}
