@@ -70,6 +70,14 @@ $grid: 30px;
 	@keyframes #{$name} { @content };
 }
 
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
 @mixin transform($transforms) {
 	-moz-transform: $transforms;
 	-o-transform: $transforms;

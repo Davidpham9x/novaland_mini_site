@@ -1,3 +1,30 @@
-/*
-** MISC
-*/
+.radio-wrapper {
+    border: medium none;
+    cursor: pointer;
+    float: left;
+    margin-right: 5px;
+
+    .input-radio {
+        border: medium none;
+        cursor: pointer;
+        height: 21px;
+        margin: 0;
+        opacity: 0;
+        filter: alpha(opacity = 0);
+        position: relative;
+        width: 25px;
+        z-index: 0;
+        float: left;
+        margin-right: 10px;
+    }
+    &.radio-1 {
+        background: url('../images/novaland-officetel/icon-uncheck.png') no-repeat;
+        width: 14px;
+        height: 13px;
+    }
+    &.radio-1.radio-selected {
+        background: url('../images/novaland-officetel/icon-check.png') no-repeat;
+        width: 14px;
+        height: 13px;
+    }
+}

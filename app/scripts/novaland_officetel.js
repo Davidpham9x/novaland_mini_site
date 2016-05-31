@@ -4,7 +4,30 @@ var novaland_officetel = window.novaland_officetel || {}; //global namespace for
     novaland_officetel.Global = {
         init: function() { //initialization code goes here
             $.support.cors = true;
+            this.initScrollTop();
+            this.initTriggerScroll();
             /*novaland_officetel.Global.initShowModalRegister();*/
+
+
+            $(".radio-wrapper .input-radio").each(function() {
+                if ($(this).is(":checked")) {
+                    $('.input-radio[name="' + $(this).attr('name') + '"]').parents(".radio-selected").removeClass("radio-selected");
+                    $(this).parents('.radio-wrapper').addClass("radio-selected");
+                }
+            });
+
+            $(document).on('change', ".radio-wrapper .input-radio", function() {
+
+                $('input[name="' + $(this).attr('name') + '"]').each(function() {
+                    if ($(this).not(':checked')) {
+                        $(this).parent().removeClass("radio-selected");
+                    }
+                });
+
+                if ($(this).is(":checked")) {
+                    $(this).parents('.radio-wrapper').addClass("radio-selected");
+                }
+            });
         },
 
         initShowModalSuccessful: function() {
@@ -37,6 +60,44 @@ var novaland_officetel = window.novaland_officetel || {}; //global namespace for
 
                     $.magnificPopup.close();
                 });
+		},
+
+		initTriggerScroll: function () {
+			var divContent = $('.introduce_projects'),
+				ulContent = divContent.find('.list-projects'),
+				liTags = ulContent.children('li');
+
+			liTags.each(function () {
+				var _this = $(this);
+
+				_this.off('click').on('click', function () {
+					if ( _this.index() == 0 ) {
+						novaland_officetel.Global.initScroll( $('.introduce--rive-gate').offset().top );
+					}
+
+					if ( _this.index() == 1 ) {
+						novaland_officetel.Global.initScroll( $('.introduce--sunrise-cityview').offset().top );
+					}
+
+					if ( _this.index() == 2 ) {
+						novaland_officetel.Global.initScroll( $('.introduce--the-sun-avenue').offset().top );
+					}
+				});
+			});
+		},
+
+		initScroll: function ( hTop ) {
+			$("html, body").animate({ scrollTop: hTop });
+		},
+
+		initScrollTop: function () {
+			var aTag = $('.lnk-back-to-top');
+
+			aTag.off('click').on('click', function (e) {
+				e.preventDefault();
+
+				novaland_officetel.Global.initScroll( 0 );
+			});
 		}
     };
 })(jQuery);

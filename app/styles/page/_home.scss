@@ -25,6 +25,7 @@
 		margin-left: -100px;
 		@include ab ( n, 50%, -8px, n );
 		display: table;
+		@include animation( shake 1.5s cubic-bezier(.36,.07,.19,.97) infinite );
 
 		p {
 			height: 100%;
@@ -91,6 +92,7 @@
 		li {
 			float: left;
 			padding: 0 45px;
+			cursor: pointer;
 			width: 33.333333%;
 			&:first-child {
 				img {
@@ -217,5 +219,20 @@
 		font-weight: bold;
 		line-height: 37px;
 		text-align: center;
+	}
+}
+
+@include CSSkeyframes (shake) {
+	10%, 90% {
+	    transform: translate3d(-1px, 0, 0);
+	}
+	20%, 80% {
+	    transform: translate3d(2px, 0, 0);
+	}
+	30%, 50%, 70% {
+	    transform: translate3d(-4px, 0, 0);
+	}
+	40%, 60% {
+	    transform: translate3d(4px, 0, 0);
 	}
 }

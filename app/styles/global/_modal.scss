@@ -83,6 +83,35 @@
 		margin: 0 auto;
 		max-width: 300px;
 
+		.question {
+			display: block;
+			color: #144a8a;
+			font-size: 13px;
+			margin-top: 10px;
+		}
+		.mess-error {
+			display: block;
+			margin: 10px 0 5px;
+			color: red;
+		}
+		.row {
+			margin-top: 10px;
+
+			.wrap-field {
+				border: 0;
+				height: auto;
+				margin-top: 0;
+				display: inline-block;
+
+				.radio-wrapper {
+					top: 2px;
+					position: relative;
+				}
+				label {
+					cursor: pointer;
+				}
+			}
+		}
 		.wrap-field {
 			border: 1px solid #aaaaaa;
 			height: 25px;
@@ -111,7 +140,9 @@
 			text-transform: uppercase;
 			padding-right: 10px;
 			background: url('../images/novaland-officetel/button-register-now.png') no-repeat;
-			@include ab ( n, n, 10px, 0 );
+			display: block;
+			float: right;
+			/* @include ab ( n, n, 10px, 15px ); */
 		}
 	}
 }
