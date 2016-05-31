@@ -4,7 +4,7 @@
     float: left;
     margin-right: 5px;
 
-    .input-radio {
+    .input-checkbox {
         border: medium none;
         cursor: pointer;
         height: 21px;
@@ -22,7 +22,7 @@
         width: 14px;
         height: 13px;
     }
-    &.radio-1.radio-selected {
+    &.radio-1.checked {
         background: url('../images/novaland-officetel/icon-check.png') no-repeat;
         width: 14px;
         height: 13px;

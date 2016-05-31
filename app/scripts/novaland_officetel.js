@@ -6,26 +6,21 @@ var novaland_officetel = window.novaland_officetel || {}; //global namespace for
             $.support.cors = true;
             this.initScrollTop();
             this.initTriggerScroll();
-            /*novaland_officetel.Global.initShowModalRegister();*/
+            novaland_officetel.Global.initShowModalRegister();
 
-
-            $(".radio-wrapper .input-radio").each(function() {
-                if ($(this).is(":checked")) {
-                    $('.input-radio[name="' + $(this).attr('name') + '"]').parents(".radio-selected").removeClass("radio-selected");
-                    $(this).parents('.radio-wrapper').addClass("radio-selected");
+            //Checkbox Wrapper
+            $('.radio-wrapper .input-checkbox').each(function() {
+                if ($(this).is(':checked')) {
+                    $(this).parents('.radio-wrapper').addClass('checked');
                 }
             });
 
-            $(document).on('change', ".radio-wrapper .input-radio", function() {
+            $(document).on('click', '.radio-wrapper .input-checkbox', function() {
 
-                $('input[name="' + $(this).attr('name') + '"]').each(function() {
-                    if ($(this).not(':checked')) {
-                        $(this).parent().removeClass("radio-selected");
-                    }
-                });
-
-                if ($(this).is(":checked")) {
-                    $(this).parents('.radio-wrapper').addClass("radio-selected");
+                if ($(this).is(':checked')) {
+                    $(this).parents('.radio-wrapper').addClass('checked');
+                } else if ($(this).not(':checked')) {
+                    $(this).parents('.radio-wrapper').removeClass('checked');
                 }
             });
         },
